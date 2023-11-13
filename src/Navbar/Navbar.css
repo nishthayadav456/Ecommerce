@@ -1,0 +1,35 @@
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+font-family: 'Montserrat';
+}
+.nav{
+    background: rgb(20, 20, 54);
+    color: whitesmoke;
+    height:60px;
+    width:100%;
+    font-weight: bold;
+   font-size: 17px;
+ display: flex;
+ justify-content: space-around;
+
+   
+}
+/* a{
+    color: white;
+} */
+.nav a:hover{
+  background-color: #172554;
+}
+.nav a{
+    display: block;
+    padding: 1rem;
+    margin:0 0.5rem;
+}
+.sub-route a{
+    color:black;
+    
+}
