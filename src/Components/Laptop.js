@@ -1,40 +1,61 @@
 import React, { useEffect ,useState} from 'react'
-import {BsFillCartDashFill} from 'react-icons/bs'
+import Nav from '../Navbar/Nav'
+import Footer from '../Footer/Footer'
 import axios from 'axios'
+import { NavLink } from 'react-router-dom'
 const Laptop = () => {
   const[data,setData]=useState([])
+  const [loadData,setLoadData]=useState(5)
+  const handleNext=()=>{
+    setLoadData(loadData+2);
+  }
   useEffect(()=>{
     axios.get("https://e-commerce-nwyx.onrender.com/api/laptop")
     .then((response)=>
       setData(response.data)
     )
     .catch((error)=>console.log(error))
-  })
+  },[])
   return (
-    <div className='Mainparent'>
-    <h1 className='mobilebar'>Mobiles</h1>
-   <div className='mobile-section'>
     
-    {data.filter((item)=>item.id>=25 && item.id<49).map((item,index)=>{
-     console.log(item)
-     return(
-        <>
-       <div className="middle"key={index}>
+  <>
+  <Nav/>
+    <div className='Mainparent'>
+      <div className='leftcontainer'>
+        <div className='childleft'>
+        <h3 className='leftnav'><NavLink>HP</NavLink> </h3>
+        <h3 className='leftnav'><NavLink>Dell</NavLink>  </h3>
+        <h3 className='leftnav'> <NavLink>Acer</NavLink></h3>
+        </div>
+     
+      </div>
+      <div className='mobile-section'>
+       
+       {data.filter((item)=>item.category==="laptop").slice(0,loadData).map((item,index)=>{
+        console.log(item)
+        return(
+           <>
+          <div className="middle"key={index}>
+      <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
+          
+            <div><h2>{item.heading.slice(0,10)}..</h2></div>
+          <div className='price'> <h2>{item.price}</h2> </div>
+          {/* <BsFillCartDashFill/>
+          <button className='btn'>Add to cart</button> */}
+          </div>
+          </>
+        )
+       })}
+      </div>
    
-         <img className='mobileimage' src={item.image} alt="not found"/>
-         
-       <div className='price'>
-       <h2>{item.price}</h2>
-       </div>
-       <BsFillCartDashFill/>
-       <button className='btn'>Add to cart</button>
-       </div>
-       </>
-     )
-    })}
-   </div>
-
- </div>
+    </div>
+    <div className="loadMore_Parent">
+                        <button onClick={handleNext} className="loadMore">
+                        Load More
+                      </button>
+                      </div>
+    <Footer/>
+    </>
   )
 }
 

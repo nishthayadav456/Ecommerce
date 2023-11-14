@@ -6,30 +6,122 @@
 body{
 font-family: 'Montserrat';
 }
-.nav{
-    background: rgb(20, 20, 54);
-    color: whitesmoke;
-    height:60px;
-    width:100%;
-    font-weight: bold;
-   font-size: 17px;
- display: flex;
- justify-content: space-around;
-
-   
+.top1{
+    border: 3px solid #1C6AA1;
+    height: 70px;
+    background-color: #2E91D3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-/* a{
+.top1_right{
+    display: flex;
+    background-color: #1C6AA1;
+    width: 40%;
+    justify-content: space-around;
+}
+.logo{
+    font-family:cursive;
+    font-size: large;
+    font-weight: bolder;
+    margin-left: 15%;
+    font-size: 150%;
     color: white;
-} */
-.nav a:hover{
-  background-color: #172554;
+    background-color:#252525;
+    width: 20%;
+    text-align: center;
+    height:41px;
 }
-.nav a{
-    display: block;
-    padding: 1rem;
-    margin:0 0.5rem;
+.search_Bar{
+    border: 2px solid black;
+    width: 40%;
+    height: 40px;
+    border-radius: 40px;
+    background-color: white;
 }
-.sub-route a{
-    color:black;
-    
+.search_Button{
+    height: 23px;
 }
+.basket{
+    border: 2px solid black;
+    background-color: white;
+    color: white;
+}
+.basket_Img{
+    width:30px;
+}
+.sign_In{
+    border: 2px solid black;
+}
+.nav2{
+    display: flex;
+    justify-content: space-around;
+    background-color:#252525;
+}
+h4{
+    color:white;
+}
+li{
+    color: white;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bolder
+}
+a{
+    text-decoration: none;
+}
+ul.sub-routes {
+  display: none;
+  position: absolute;
+  background: transparent;
+  margin: 0;
+}
+.main-link:hover + ul.sub-routes {
+  display: block;
+}
+.route-container:hover ul.sub-routes {
+  display: block;
+  height: 200px;
+}
+.menu{
+    position: absolute;
+    background-color: crimson;
+}
+.ham_Div{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    display: flex;
+    display: none;
+}
+.search{
+    margin-top: 10%;
+}
+.span1{
+color: red;
+}
+.ham_Basket_Img2{
+    margin-top: 10%;
+    width: 10%;
+    background-color: white;
+}
+.sign{
+    margin-top: 10%;
+}
+/* Hamburger Icon Styles */
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+  }
+  .hamburger{
+    display: none;
+  }
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  .open {
+    transform: origine(center);
+  }
