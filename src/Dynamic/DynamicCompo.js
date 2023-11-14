@@ -2,7 +2,7 @@ import React, { useEffect ,useState} from 'react'
 import { useParams } from 'react-router-dom'
 import Nav from '../Navbar/Nav'
 import Footer from '../Footer/Footer'
-import { NavLink } from 'react-router-dom'
+
 import axios from 'axios'
 const DynamicCompo = () => {
     const {id} = useParams();
@@ -22,16 +22,17 @@ const DynamicCompo = () => {
         console.log(item)
         return(
            <>
-           <div>
-            {/* <NavLink to={`/dynamic/${item.id}`}> */}
+           <div className='dynamiccontainer'>
+           
           <div className="middle"key={index}>
       <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
           
-            <div><h2>{item.heading.slice(0,10)}..</h2></div>
+            <div><h2>{item.heading.slice(0,20)}..</h2></div>
           <div className='price'> <h2>{item.price}</h2> </div>
-         
+          <h3>{item.Model}</h3>
+          <p>{item.description}</p>
           </div>
-          {/* </NavLink> */}
+        
           </div>
           </>
         )

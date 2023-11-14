@@ -6,6 +6,9 @@
 body{
 font-family: 'Montserrat';
 }
+.store{
+    color: white;
+}
 .top1{
     border: 3px solid #1C6AA1;
     height: 70px;
@@ -36,6 +39,10 @@ font-family: 'Montserrat';
     display: flex;
     align-items: center;
 }
+.loginicon{
+    color: white;
+    
+}
 .search_Bar{
     border: 2px solid black;
     width: 40%;
@@ -56,12 +63,13 @@ font-family: 'Montserrat';
 }
 .sign_In{
     border: 2px solid black;
+   
 }
 .nav2{
     display: flex;
     justify-content: space-around;
     background-color:#252525;
-    height: 50px;
+    height: 60px;
     align-items: center;
    
 }
@@ -70,7 +78,7 @@ h4{
 }
 li{
     color: white;
-    font-size: 15px;
+    font-size: 17px;
     font-family: 'Courier New', Courier, monospace;
     font-weight:bolder
 }
@@ -92,7 +100,7 @@ ul.sub-routes {
 }
 .menu{
     position: absolute;
-    background-color: crimson;
+    background-color: rgb(114, 171, 180);
 }
 .ham_Div{
     justify-content: space-around;

@@ -18,8 +18,10 @@ const Footer = () => {
       {/* <div className="middleContainer"> */}
         <div className="middleSubCon">
           <div className="FDescription">
-           <p> StoreM4 powered vy Mobirise</p>
-           <p> </p>
+          <p className="heading">StoreM4</p>
+           <p> StoreM4 powered By Mobirise</p>
+           <p> STay Home - Shop Online</p>
+<p>Where you can always find something you want...</p>
           </div>
           <div className="Copywrite">
             <span>©</span>2023 All Rights Reserved Terms to use and privacy policy
@@ -31,12 +33,13 @@ const Footer = () => {
           <FaTwitterSquare />
           <FaLinkedin />
           </div>
+         
         </div>
       {/* </div> */}
       </div>
      
       <div className="contact">
-        <h3>Contact</h3>
+        <h3>Contact Us</h3>
         <div>
           Address Sec-C2 Paradise (Uttarakhand).
         </div>
@@ -49,7 +52,7 @@ const Footer = () => {
       </div>
 
       <div className="Refernce">
-        <h3 className="References">References</h3>
+        <h3 className="References">Quick Links</h3>
         <div> <Link   className="Flinks"to="/mobile">Mobiles</Link></div>
         <div> <Link  className="Flinks" to="/laptop">Laptop</Link></div>
         <div> <Link  className="Flinks" to="/watches">watches</Link></div>

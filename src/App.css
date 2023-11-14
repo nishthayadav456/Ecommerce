@@ -23,18 +23,25 @@ body{
 text-align: center;
 border: 3px solid rgb(172, 29, 29);
 margin-top: 30px;
-width:300px;
+width:250px;
 height:350px;
-
+border: 2px solid #ebebeb;
+border-radius: 5px;
+ box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    
 }
-
+.middle:hover{
+  transform: translateY(-10px);
+}
 .mobileimage{
   height:250px;
   width:200px;
   
   
 }
-
+a{
+  color: black;
+}
 
 .btn{
   height:10%;
@@ -46,6 +53,7 @@ height:350px;
   width:300px;
   justify-content: space-around;
   display: flex;
+ 
 }
 .leftnav{
   
@@ -63,5 +71,24 @@ height:350px;
   width:90%;
   height: 400px;
   position: relative;
-  top:100px
+  top:100px;
+  background-color: #e2d0d0;
+}
+.dynamiccontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadParent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.loadMore{
+  width:100px;
+  height:50px;
+  margin: 30px;
+  border-radius: 10px solid black;
+  background-color: rgb(173, 169, 169);
 }

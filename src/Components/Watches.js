@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom'
 const Watches = () => {
   const[data,setData]=useState([])
   const [loadData,setLoadData]=useState(5)
-  const handleNext=()=>{
+  const handleClick=()=>{
     setLoadData(loadData+2);
   }
   useEffect(()=>{
@@ -35,23 +35,24 @@ const Watches = () => {
        {data.filter((item)=>item.category==="watches").slice(0,loadData).map((item,index)=>{
         console.log(item)
         return(
-           <>
+           <div>
+                <NavLink to={`/dynamic/${item.id}`}>
           <div className="middle"key={index}>
       <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
           
             <div><h2>{item.heading.slice(0,10)}..</h2></div>
           <div className='price'> <h2>{item.price}</h2> </div>
-          {/* <BsFillCartDashFill/>
-          <button className='btn'>Add to cart</button> */}
+         
           </div>
-          </>
+          </NavLink>
+          </div>
         )
        })}
       </div>
    
     </div>
-    <div className="loadMore_Parent">
-                        <button onClick={handleNext} className="loadMore">
+    <div className="loadParent">
+                        <button onClick={handleClick} className="loadMore">
                         Load More
                       </button>
                       </div>
