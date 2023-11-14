@@ -1,6 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
+import { BsCart3 } from "react-icons/bs";
 const Nav = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isHomeHovered, setIsHomeHovered] = useState(false);
@@ -12,16 +13,7 @@ const Nav = () => {
   return (
     <div>
       <nav className={`nav2 ${isMenuOpen ? "open" : ""}`}>
-        {/* <div className="ham_Div">
-        <input className="search" placeholder="Search Here"></input>
-        <NavLink to="/cart">
-        <img className="ham_Basket_Img2" src={basketImg} alt="Not Found" />
-        <span className="span2">{cardCount.length}</span>
-        </NavLink>
-        <div className="sign">
-          <button className="ham_Btn">Sign In</button>
-        </div>
-        </div> */}
+        
         <div
           className="home-container"
           onMouseEnter={() => setIsHomeHovered(true)}
@@ -132,6 +124,17 @@ const Nav = () => {
             )}
           </ul>
         </NavLink>
+        </div>
+        <div className='box'>
+        <input  placeholder="Search Here"></input>
+        {/* <NavLink to="/cart"> */}
+        <div className='cart'>  <BsCart3 /></div>
+      
+        {/* <span className="span2">{cardCount.length}</span> */}
+        {/* </NavLink> */}
+        <div>
+          <button>Sign In</button>
+        </div>
         </div>
      </nav>
     </div>

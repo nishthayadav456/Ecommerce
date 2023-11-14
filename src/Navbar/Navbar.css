@@ -32,6 +32,10 @@ font-family: 'Montserrat';
     text-align: center;
     height:41px;
 }
+.box{
+    display: flex;
+    align-items: center;
+}
 .search_Bar{
     border: 2px solid black;
     width: 40%;
@@ -57,13 +61,16 @@ font-family: 'Montserrat';
     display: flex;
     justify-content: space-around;
     background-color:#252525;
+    height: 50px;
+    align-items: center;
+   
 }
 h4{
     color:white;
 }
 li{
     color: white;
-    font-size: 25px;
+    font-size: 15px;
     font-family: 'Courier New', Courier, monospace;
     font-weight:bolder
 }
@@ -124,4 +131,9 @@ color: red;
   }
   .open {
     transform: origine(center);
+  }
+  .cart{
+    color: white;
+    
+    width:30px;
   }

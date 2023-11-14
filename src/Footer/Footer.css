@@ -23,7 +23,13 @@
    
 }
 
-
+.socialicons{
+    display: flex;
+    justify-content: space-around;
+    width:200px;
+    border: 2px solid red;
+   
+}
 
 .center{
     padding-top: 1rem;

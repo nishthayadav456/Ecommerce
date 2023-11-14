@@ -1,6 +1,10 @@
 import React from "react";
 import './Footer.css'
 import { Link } from "react-router-dom";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitterSquare } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -19,6 +23,13 @@ const Footer = () => {
           </div>
           <div className="Copywrite">
             <span>©</span>2023 All Rights Reserved Terms to use and privacy policy
+          </div>
+          <div className="socialicons">
+            <div><FaFacebookSquare /></div>
+          
+          <FaInstagram />
+          <FaTwitterSquare />
+          <FaLinkedin />
           </div>
         </div>
       {/* </div> */}
