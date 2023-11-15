@@ -1,5 +1,5 @@
 import './Navbar.css'
-import { BrowserRouter,NavLink,Route,Routes} from 'react-router-dom'
+import { BrowserRouter,Route,Routes} from 'react-router-dom'
 import Home from '../Components/Home'
 import Laptop from '../Components/Laptop'
 import Mobiles from '../Components/Mobiles'
@@ -25,16 +25,7 @@ const Navbar = () => {
   return (
     <div>
       <BrowserRouter>
-      {/* <div className='nav'>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/laptop">Laptop</NavLink>
-     <NavLink to="/mobile">Mobiles</NavLink>
-      <NavLink to="/watches">watches</NavLink>
-       <NavLink to="/television">Television </NavLink>
-     <NavLink to="/accessories">Accessories</NavLink>
-     
       
-      </div> */}
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/laptop" element={<Laptop/>}/>

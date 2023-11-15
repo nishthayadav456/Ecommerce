@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
 const Nav = () => {
-  const [MenuOpen, setMenuOpen] = useState(false);
+  const [MenuOpen] = useState(false);
   const [HomeHover, HomeHovered] = useState(false);
   const[MobileHover,MobileHovered]=useState(false)
   const[acceHover,acceHovered]=useState(false)
