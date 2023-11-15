@@ -11,7 +11,9 @@
     color: white;
   
 }
-
+p{
+    color: white;
+}
 
 .GridCont{
     display: flex;
@@ -28,8 +30,14 @@
     display: flex;
     justify-content: space-around;
     width:200px;
-    border: 2px solid red;
    
+    color: aliceblue;
+   
+   
+}
+.social-icon{
+    height:30px;
+    width:50px;
 }
 .heading{
     color: white;

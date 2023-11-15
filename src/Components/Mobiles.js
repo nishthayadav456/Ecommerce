@@ -3,6 +3,7 @@ import Nav from '../Navbar/Nav'
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
+
 const Mobiles = () => {
   const[data,setData]=useState([])
   const [loadData,setLoadData]=useState(5)
@@ -42,7 +43,7 @@ const Mobiles = () => {
           
             <div><h3>{item.heading.slice(0,10)}..</h3></div>
           <div className='price'> <h3>{item.price}</h3> </div>
-        
+         <div><button className='addtocart'>Add to cart</button></div> 
           </div>
           </NavLink>
           </div>

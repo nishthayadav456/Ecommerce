@@ -24,14 +24,14 @@ const Footer = () => {
 <p>Where you can always find something you want...</p>
           </div>
           <div className="Copywrite">
-            <span>©</span>2023 All Rights Reserved Terms to use and privacy policy
+           <p> <span>©</span>2023 All Rights Reserved Terms to use and privacy policy</p>
           </div>
           <div className="socialicons">
-            <div><FaFacebookSquare /></div>
+            < FaFacebookSquare className="social-icon"/>
           
-          <FaInstagram />
-          <FaTwitterSquare />
-          <FaLinkedin />
+          <FaInstagram className="social-icon"/>
+          <FaTwitterSquare className="social-icon" />
+          <FaLinkedin className="social-icon"/>
           </div>
          
         </div>

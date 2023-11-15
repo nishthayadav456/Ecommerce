@@ -26,11 +26,13 @@ const DynamicCompo = () => {
            
           <div className="middle"key={index}>
       <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
-          
-            <div><h2>{item.heading.slice(0,20)}..</h2></div>
+      </div>
+      <div className='rightcontainer'>
+            <div><h2>{item.heading.slice(0,50)}</h2></div>
           <div className='price'> <h2>{item.price}</h2> </div>
           <h3>{item.Model}</h3>
-          <p>{item.description}</p>
+          <p className='description'>{item.description}</p>
+          <div><button className='addtocart'>Add to cart</button></div> 
           </div>
         
           </div>

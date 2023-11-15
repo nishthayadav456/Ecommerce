@@ -7,34 +7,11 @@ body{
 font-family: 'Montserrat';
 }
 .store{
-    color: white;
+    color: black;
+    background-color: white;
 }
-.top1{
-    border: 3px solid #1C6AA1;
-    height: 70px;
-    background-color: #2E91D3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.top1_right{
-    display: flex;
-    background-color: #1C6AA1;
-    width: 40%;
-    justify-content: space-around;
-}
-.logo{
-    font-family:cursive;
-    font-size: large;
-    font-weight: bolder;
-    margin-left: 15%;
-    font-size: 150%;
-    color: white;
-    background-color:#252525;
-    width: 20%;
-    text-align: center;
-    height:41px;
-}
+
+
 .box{
     display: flex;
     align-items: center;
@@ -50,21 +27,7 @@ font-family: 'Montserrat';
     border-radius: 40px;
     background-color: white;
 }
-.search_Button{
-    height: 23px;
-}
-.basket{
-    border: 2px solid black;
-    background-color: white;
-    color: white;
-}
-.basket_Img{
-    width:30px;
-}
-.sign_In{
-    border: 2px solid black;
-   
-}
+
 .nav2{
     display: flex;
     justify-content: space-around;
@@ -102,46 +65,13 @@ ul.sub-routes {
     position: absolute;
     background-color: rgb(114, 171, 180);
 }
-.ham_Div{
-    justify-content: space-around;
-    flex-wrap: wrap;
-    display: flex;
-    display: none;
-}
+
 .search{
     margin-top: 10%;
 }
-.span1{
-color: red;
-}
-.ham_Basket_Img2{
-    margin-top: 10%;
-    width: 10%;
-    background-color: white;
-}
-.sign{
-    margin-top: 10%;
-}
-/* Hamburger Icon Styles */
-.hamburger-icon {
-    display: none;
-    cursor: pointer;
-  }
-  .hamburger{
-    display: none;
-  }
-  .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-  .open {
-    transform: origine(center);
-  }
+
+
   .cart{
     color: white;
-    
     width:30px;
   }

@@ -30,9 +30,9 @@ const Fastrack = () => {
             <div className="middle"key={index}>
         <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
             
-              <div><h2>{item.heading.slice(0,10)}..</h2></div>
-            <div className='price'> <h2>{item.price}</h2> </div>
-           
+              <div><h3>{item.heading.slice(0,10)}..</h3></div>
+            <div className='price'> <h3>{item.price}</h3> </div>
+            <div><button className='addtocart'>Add to cart</button></div> 
             </div>
             </NavLink>
             </div>
