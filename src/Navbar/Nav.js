@@ -24,12 +24,12 @@ const Nav = () => {
               <li>Home</li>
               {HomeHover && (
                 <ul type="none" className="menu">
-                  <NavLink to="/">Home</NavLink>
+                  {/* <NavLink to="/">Home</NavLink>
       <NavLink to="/laptop">Laptop</NavLink>
      <NavLink to="/mobile">Mobiles</NavLink>
       <NavLink to="/watches">watches</NavLink>
        <NavLink to="/television">Television </NavLink>
-     <NavLink to="/accessories">Accessories</NavLink>
+     <NavLink to="/accessories">Accessories</NavLink> */}
                 </ul>
               )}
             </ul>
@@ -122,11 +122,10 @@ const Nav = () => {
         </div>
         <div className='box'>
         <input  placeholder="Search Here..."></input>
-        {/* <NavLink to="/cart"> */}
+       
         <div className='cart'>  <BsCart3 /></div>
       
-        {/* <span className="span2">{cardCount.length}</span> */}
-        {/* </NavLink> */}
+       
         <div className='loginicon'>
          
           <FaRegUser />
