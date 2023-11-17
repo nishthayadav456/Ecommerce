@@ -6,7 +6,8 @@ import { FaRegUser } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 
 const Nav = () => {
-  const cartCount =useSelector((state)=>state.Cart.cart)
+
+    const cartCount =useSelector((state)=>state.Cart.cart)
   const [MenuOpen] = useState(false);
   const [HomeHover, HomeHovered] = useState(false);
   const[MobileHover,MobileHovered]=useState(false)
@@ -27,12 +28,7 @@ const Nav = () => {
               <li>Home</li>
               {HomeHover && (
                 <ul type="none" className="menu">
-                  {/* <NavLink to="/">Home</NavLink>
-      <NavLink to="/laptop">Laptop</NavLink>
-     <NavLink to="/mobile">Mobiles</NavLink>
-      <NavLink to="/watches">watches</NavLink>
-       <NavLink to="/television">Television </NavLink>
-     <NavLink to="/accessories">Accessories</NavLink> */}
+                
                 </ul>
               )}
             </ul>
@@ -130,11 +126,12 @@ const Nav = () => {
         <NavLink to="/cart"><BsCart3 /><span style={{color:"red"}}>{cartCount.length}</span></NavLink>
         </div>
       
-       
+       <NavLink to="/register">
         <div className='loginicon'>
         
           <FaRegUser />
         </div>
+        </NavLink>
         </div>
      </nav>
     </div>

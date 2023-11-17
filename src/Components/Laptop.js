@@ -3,7 +3,8 @@ import React, { useEffect ,useState} from 'react'
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
-import Navigation from './header/Navigation'
+
+import Nav from '../Navbar/Nav'
 const Laptop = () => {
   const[data,setData]=useState([])
   const [loadData,setLoadData]=useState(5)
@@ -20,7 +21,7 @@ const Laptop = () => {
   return (
     
   <>
-  <Navigation/>
+  <Nav/>
     <div className='Mainparent'>
       <div className='leftcontainer'>
         <div className='childleft'>

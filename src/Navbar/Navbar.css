@@ -1,4 +1,4 @@
-*{
+ *{
     margin:0;
     padding: 0;
     text-decoration: none;
@@ -75,6 +75,11 @@ ul.sub-routes {
     color: white;
     width:30px;
   }
+  
+
+
+
+
   
   /* Cart.css */
 
@@ -158,5 +163,5 @@ ul.sub-routes {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-  } 
+  }  
    

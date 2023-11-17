@@ -1,17 +1,19 @@
 
-import Nav from '../Navbar/Nav'
+
 import Slider from '../Silder/Slider'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import React, { useEffect ,useState} from 'react'
 import Footer from '../Footer/Footer'
 import Login from '../Views/Login'
+
+import Nav from '../Navbar/Nav'
 const Home = () => {
   const[data,setData]=useState([])
  
  
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/postdata")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/Searchdata")
     .then((response)=>
       setData(response.data)
     )

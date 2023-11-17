@@ -3,7 +3,8 @@ import React, { useEffect ,useState} from 'react'
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
-import Navigation from './header/Navigation'
+
+import Nav from '../Navbar/Nav'
 const Watches = () => {
   const[data,setData]=useState([])
   const [loadData,setLoadData]=useState(5)
@@ -11,7 +12,7 @@ const Watches = () => {
     setLoadData(loadData+2);
   }
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/Searchdata")
     .then((response)=>
       setData(response.data)
     )
@@ -20,7 +21,7 @@ const Watches = () => {
   return (
     
   <>
-  <Navigation/>
+  <Nav/>
     <div className='Mainparent'>
       <div className='leftcontainer'>
         <div className='childleft'>

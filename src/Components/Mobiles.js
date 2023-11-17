@@ -5,7 +5,8 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import { addtoCart } from '../Redux/Slice'
 import { useDispatch } from 'react-redux'
-import Navigation from './header/Navigation'
+
+import Nav from '../Navbar/Nav'
 
 const Mobiles = () => {
   const dispatch=useDispatch()
@@ -24,7 +25,7 @@ const Mobiles = () => {
   return (
     
   <>
-  <Navigation/>
+  <Nav/>
     <div className='Mainparent'>
       <div className='leftcontainer'>
         <div className='childleft'>

@@ -18,15 +18,15 @@
   .nav,
   .openNav {
     width: 85%;
-    font-size: 22px;
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
     text-decoration: none;
     margin: auto;
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
     border-bottom: 2px solid  rgb(207, 199, 199);
     align-items: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 
   }
   /* hamburger */

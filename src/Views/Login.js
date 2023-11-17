@@ -1,28 +1,59 @@
 
-import { NavLink } from 'react-router-dom'
+import { useState } from "react"
 
+import axios from "axios"
 
-const Login = () => {
+function Login(){
+
+   
+    const [data, setData] = useState(
+        {
+           
+            email: "",
+            password: ""
+        }
+    )
+
     
-  return (
-    <div>
-      <div className='form-container'>
-<h2>Login</h2>
-<form action ='/login' method="get">
-<div className='form-group'>
-<label for="name">Name:</label>
-<input type="text" id="name" name="username" placeholder="Enter your name" required/>
-</div>
-<div className='form-group'>
-<label for="password">Password:</label>
-<input type="password" id="password" name="password" placeholder="password" required/>
-</div>
-<button type="submit" className='submit-btn'>Login</button>
-</form>
-<p>Don't have an account? <NavLink to="/signup">signup</NavLink></p>
-      </div>
-    </div>
-  )
-}
-
-export default Login
+    const changeHandle = (event) => {
+        setData({ ...data, [event.target.name]: event.target.value })
+    }
+    const handleClick=(e)=>{
+         e.preventDefault()
+        console.log(data)
+        axios.post("http://localhost:4000/api/login",data)
+        //  .then(res=>console.log(res.data))
+         .then((res)=>{
+          
+            alert(res.data.msg);
+            console.log(res.data)
+            setData(res.data);
+            localStorage.setItem("token",res.data.token)
+          })
+        .catch(err=>console.log(err))
+        setData({
+            name: "",
+            phone: "",
+            email: "",
+            password: ""
+        })
+     
+      
+      }
+    
+    return(
+        <>
+      
+        <form>
+        <h1>LOGIN FORM</h1>
+            <label  htmlFor="email">Email : </label>
+            <input type="email" placeholder="Enter your email" value={data.email} id="email" name="email" onChange={changeHandle}/><br/><br/>
+            <label  htmlFor="password">Password : </label>
+            <input  type="password" placeholder="Enter your password" value={data.password}id="password" name="password" onChange={changeHandle} /><br/><br/>
+            <button className="btn1" onClick={handleClick}>login</button>
+         
+        </form>
+        </>
+    )
+    }
+    export default Login;

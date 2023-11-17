@@ -1,8 +1,10 @@
 import React, { useEffect ,useState} from 'react'
-import Nav from '../Navbar/Nav'
+
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
+
+import Nav from '../Navbar/Nav'
 
 const Accessories = () => {
   const[data,setData]=useState([])
@@ -11,7 +13,7 @@ const Accessories = () => {
     setLoadData(loadData+2);
   }
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/Searchdata")
     .then((response)=>
       setData(response.data)
     )

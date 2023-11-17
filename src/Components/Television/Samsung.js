@@ -10,7 +10,7 @@ const Samsungtv = () => {
           setLoadData(loadData+2);
         }
     useEffect(()=>{
-      axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
+      axios.get("https://e-commerce-nwyx.onrender.com/api/Searchdata")
       .then((response)=>
         setData(response.data)
       )
