@@ -10,7 +10,7 @@ const HP = () => {
           setLoadData(loadData+2);
         }
     useEffect(()=>{
-      axios.get("https://e-commerce-nwyx.onrender.com/api/laptop")
+      axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
       .then((response)=>
         setData(response.data)
       )

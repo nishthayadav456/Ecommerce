@@ -1,17 +1,21 @@
 import React, { useEffect ,useState} from 'react'
-import Nav from '../Navbar/Nav'
+
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
+import { addtoCart } from '../Redux/Slice'
+import { useDispatch } from 'react-redux'
+import Navigation from './header/Navigation'
 
 const Mobiles = () => {
+  const dispatch=useDispatch()
   const[data,setData]=useState([])
   const [loadData,setLoadData]=useState(5)
   const handleClick=()=>{
     setLoadData(loadData+2);
   }
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/mobile")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/Searchdata")
     .then((response)=>
       setData(response.data)
     )
@@ -20,13 +24,13 @@ const Mobiles = () => {
   return (
     
   <>
-  <Nav/>
+  <Navigation/>
     <div className='Mainparent'>
       <div className='leftcontainer'>
         <div className='childleft'>
-        <h3 className='leftnav'><NavLink>Realme</NavLink> </h3>
-        <h3 className='leftnav'><NavLink>Vivo</NavLink>  </h3>
-        <h3 className='leftnav'> <NavLink>Samsung</NavLink></h3>
+        <h3 className='leftnav'><NavLink  to="/realme">Realme</NavLink> </h3>
+        <h3 className='leftnav'><NavLink  to="/vivo">Vivo</NavLink>  </h3>
+        <h3 className='leftnav'> <NavLink  to="/samsung">Samsung</NavLink></h3>
         </div>
      
       </div>
@@ -34,8 +38,11 @@ const Mobiles = () => {
        
        {data.filter((item)=>item.category==="mobile").slice(0,loadData).map((item,index)=>{
         console.log(item)
+        const{id=item.id,img=item.img,title=item.title,price=item.price} = item
+        console.log(id)
         return(
            <>
+          
            <div>
             <NavLink to={`/dynamic/${item.id}`}>
           <div className="middle"key={index}>
@@ -43,10 +50,12 @@ const Mobiles = () => {
           
             <div><h3>{item.heading.slice(0,10)}..</h3></div>
           <div className='price'> <h3>{item.price}</h3> </div>
-         <div><button className='addtocart'>Add to cart</button></div> 
-          </div>
+          <button onClick={()=>dispatch(addtoCart({id,img,title,price}))} className='addtocart'>Add to cart</button>
+         </div>
           </NavLink>
+          
           </div>
+          
           </>
         )
        })}

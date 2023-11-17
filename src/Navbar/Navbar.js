@@ -21,6 +21,7 @@ import Charger from '../Components/Accessories/Charger'
 import Headphone from '../Components/Accessories/Headphone'
 import DynamicCompo from '../Dynamic/DynamicCompo'
 import Samsungtv from '../Components/Television/Samsung'
+import Cart from '../Cart/Cart'
 const Navbar = () => {
   return (
     <div>
@@ -53,7 +54,7 @@ const Navbar = () => {
         <Route path="/headphone" element={<Headphone/>}/>
     
 <Route path="/dynamic/:id" element={<DynamicCompo/>}/>
-
+<Route path="/cart" element={<Cart/>}/>
       </Routes>
       </BrowserRouter>
     </div>

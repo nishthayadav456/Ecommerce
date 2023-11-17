@@ -3,7 +3,10 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { BsCart3 } from "react-icons/bs";
 import { FaRegUser } from "react-icons/fa";
+import { useSelector } from 'react-redux';
+
 const Nav = () => {
+  const cartCount =useSelector((state)=>state.Cart.cart)
   const [MenuOpen] = useState(false);
   const [HomeHover, HomeHovered] = useState(false);
   const[MobileHover,MobileHovered]=useState(false)
@@ -123,11 +126,13 @@ const Nav = () => {
         <div className='box'>
         <input  placeholder="Search Here..."></input>
        
-        <div className='cart'>  <BsCart3 /></div>
+        <div className='cart'>  
+        <NavLink to="/cart"><BsCart3 /><span style={{color:"red"}}>{cartCount.length}</span></NavLink>
+        </div>
       
        
         <div className='loginicon'>
-         
+        
           <FaRegUser />
         </div>
         </div>

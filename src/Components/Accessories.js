@@ -11,7 +11,7 @@ const Accessories = () => {
     setLoadData(loadData+2);
   }
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/accessories")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
     .then((response)=>
       setData(response.data)
     )
@@ -24,8 +24,8 @@ const Accessories = () => {
     <div className='Mainparent'>
       <div className='leftcontainer'>
         <div className='childleft'>
-        <h3 className='leftnav'><NavLink>Chargers</NavLink> </h3>
-        <h3 className='leftnav'><NavLink>headphones</NavLink>  </h3>
+        <h3 className='leftnav'><NavLink to="/charger">Chargers</NavLink> </h3>
+        <h3 className='leftnav'><NavLink to="/headphone">headphones</NavLink>  </h3>
      
         </div>
      

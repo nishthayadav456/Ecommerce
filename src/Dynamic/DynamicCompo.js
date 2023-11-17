@@ -9,7 +9,7 @@ const DynamicCompo = () => {
     const newid= parseInt(id)
     const[data,setData]=useState([])
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/home")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/postdata")
     .then((response)=>
       setData(response.data)
     )

@@ -1,9 +1,10 @@
 
 import React, { useEffect ,useState} from 'react'
-import Nav from '../Navbar/Nav'
+
 import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
+import Navigation from './header/Navigation'
 const Television = () => {
   const[data,setData]=useState([])
   const [loadData,setLoadData]=useState(5)
@@ -11,7 +12,7 @@ const Television = () => {
     setLoadData(loadData+2);
   }
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/television")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
     .then((response)=>
       setData(response.data)
     )
@@ -20,12 +21,12 @@ const Television = () => {
   return (
     
   <>
-  <Nav/>
+  <Navigation/>
     <div className='Mainparent'>
       <div className='leftcontainer'>
         <div className='childleft'>
-        <h3 className='leftnav'><NavLink>LG</NavLink> </h3>
-        <h3 className='leftnav'><NavLink>Samsung</NavLink>  </h3>
+        <h3 className='leftnav'><NavLink to="/lg">LG</NavLink> </h3>
+        <h3 className='leftnav'><NavLink to="/samsungtv">Samsung</NavLink>  </h3>
 
         </div>
      

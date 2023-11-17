@@ -10,7 +10,7 @@ const LG = () => {
           setLoadData(loadData+2);
         }
     useEffect(()=>{
-      axios.get("https://e-commerce-nwyx.onrender.com/api/television")
+      axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
       .then((response)=>
         setData(response.data)
       )

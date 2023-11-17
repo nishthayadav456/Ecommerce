@@ -11,7 +11,7 @@ const Samsung = () => {
           setLoadData(loadData+2);
         }
     useEffect(()=>{
-      axios.get("https://e-commerce-nwyx.onrender.com/api/mobile")
+      axios.get("https://e-commerce-nwyx.onrender.com/api/searchdata")
       .then((response)=>
         setData(response.data)
       )

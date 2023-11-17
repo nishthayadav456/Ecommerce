@@ -5,12 +5,13 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import React, { useEffect ,useState} from 'react'
 import Footer from '../Footer/Footer'
+import Login from '../Views/Login'
 const Home = () => {
   const[data,setData]=useState([])
  
  
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/Home")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/postdata")
     .then((response)=>
       setData(response.data)
     )
@@ -48,6 +49,7 @@ const Home = () => {
       <img className='bottom-image' src="https://i.pinimg.com/originals/d6/cd/18/d6cd1890a3ddaf9c45b32d436ccf6826.gif" alt="not found"/>
     
       <Footer/>
+      <button><Login/></button>
     </div>
     
   )
