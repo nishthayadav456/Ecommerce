@@ -11,7 +11,7 @@ import Nav from '../Navbar/Nav'
 const Mobiles = () => {
   const dispatch=useDispatch()
   const[data,setData]=useState([])
-  const [loadData,setLoadData]=useState(5)
+  const [loadData,setLoadData]=useState(8)
   const handleClick=()=>{
     setLoadData(loadData+2);
   }
@@ -39,7 +39,7 @@ const Mobiles = () => {
        
        {data.filter((item)=>item.category==="mobile").slice(0,loadData).map((item,index)=>{
         console.log(item)
-        const{id=item.id,img=item.img,title=item.title,price=item.price} = item
+        const{id=item.id,image=item.image,title=item.title,price=item.price} = item
         console.log(id)
         return(
            <>
@@ -50,13 +50,13 @@ const Mobiles = () => {
       <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
           
             <div><h3>{item.heading.slice(0,10)}..</h3></div>
-          <div className='price'> <h3>{item.price}</h3> </div>
-          <button onClick={()=>dispatch(addtoCart({id,img,title,price}))} className='addtocart'>Add to cart</button>
+          <div className='price'> <h3>₹{item.price}</h3> </div>
+         
          </div>
           </NavLink>
-          
+          <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
           </div>
-          
+         
           </>
         )
        })}

@@ -3,9 +3,12 @@ import axios from 'axios'
 import Footer from '../../Footer/Footer'
 import Nav from '../../Navbar/Nav'
 import { NavLink } from 'react-router-dom'
+import { addtoCart } from '../../Redux/Slice'
+import { useDispatch } from 'react-redux'
 const Dell = () => {
+  const dispatch=useDispatch()
   const[data,setData]=useState([])
-  const [loadData,setLoadData]=useState(5)
+  const [loadData,setLoadData]=useState(8)
         const handleClick=()=>{
           setLoadData(loadData+2);
         }
@@ -24,6 +27,8 @@ const Dell = () => {
          
          {data.filter((item)=>item.Brand==="Dell").slice(0,loadData).map((item,index)=>{
           console.log(item)
+          const{id=item.id,image=item.image,title=item.title,price=item.price} = item
+          console.log(id)
           return(
              <div>
                  <NavLink to={`/dynamic/${item.id}`}>
@@ -31,10 +36,11 @@ const Dell = () => {
         <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
             
               <div><h3>{item.heading.slice(0,10)}..</h3></div>
-            <div className='price'> <h3>{item.price}</h3> </div>
-            <div><button className='addtocart'>Add to cart</button></div> 
+            <div className='price'> <h3>₹{item.price}</h3> </div>
+        
             </div>
             </NavLink>
+            <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
             </div>
           )
          })}

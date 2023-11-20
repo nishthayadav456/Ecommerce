@@ -108,6 +108,14 @@ pre{
        
         background-color: darkslategray;
      }
+     .heading{
+        color: white;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 20px;
+    }
+  
    
      .center{
         padding-top: 1rem;
@@ -122,12 +130,25 @@ pre{
       
     
     }
+    .socialicons{
+        display: flex;
+        justify-content: space-around;
+        width:200px;
+       
+        color: aliceblue;
+       
+       
+    }
+    .social-icon{
+        height:30px;
+        width:50px;
+    }
      .middleContainer {
         display: flex;
         flex-direction: column;
     }
         .middleSubCon {
-        height: 4rem;
+       
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -161,6 +182,14 @@ pre{
        
         
     }
+    .heading{
+        color: white;
+        font-size: 40px;
+        font-weight: bolder;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 20px;
+    }
+   
     .GridCont{
         display: flex;
         flex-wrap: wrap;
@@ -209,6 +238,19 @@ pre{
     .Flinks{
         text-decoration: none;
         color: #ffffff;
+    }
+    .socialicons{
+        display: flex;
+        justify-content: space-around;
+        width:200px;
+       
+        color: aliceblue;
+       
+       
+    }
+    .social-icon{
+        height:30px;
+        width:50px;
     }
 }
     

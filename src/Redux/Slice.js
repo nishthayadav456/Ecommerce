@@ -10,11 +10,9 @@ const AddtoCart = createSlice({
         (item) => item.id === action.payload.id
       );
       if (existingItem) {
-        // If the item already exists, increase its quantity and total
-        existingItem.quantity += 1;
+     existingItem.quantity += 1;
         existingItem.total = existingItem.price * existingItem.quantity;
       } else {
-        // If the item doesn't exist, add it to the cart with quantity 1 and calculate the total
         state.cart.push({
           ...action.payload,
           quantity: 1,

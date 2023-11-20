@@ -16,7 +16,7 @@ const Cart = () => {
   };
   return (
     <div>
-      <h2 className="cartparent">Cart</h2>
+      <h2 className="cartparent"> Your Cart</h2>
       <div className="contentcart">
         <div className="titleOfcart">
           <h4>Product</h4>
@@ -47,7 +47,7 @@ const Cart = () => {
         </div>
         <div className="totalitem">
           <h2>Total </h2>
-          <h1>{total}</h1>
+          <h1>₹{total}</h1>
         </div>
         <div className="buying">
           <button className='buybtn'>Buy Now</button>
