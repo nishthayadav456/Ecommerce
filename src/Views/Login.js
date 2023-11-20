@@ -43,7 +43,7 @@ function Login(){
       }
     
     return(
-        <>
+        <div className="body">
       
         <form>
         <h1 className="formheading">LOGIN </h1>
@@ -56,7 +56,7 @@ function Login(){
             
          
         </form>
-        </>
+        </div>
     )
     }
     export default Login;

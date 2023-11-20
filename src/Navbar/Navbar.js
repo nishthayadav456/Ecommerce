@@ -24,6 +24,7 @@ import Samsungtv from '../Components/Television/Samsung'
 import Cart from '../Cart/Cart'
 import Signup from '../Views/Signup'
 import Login from '../Views/Login'
+
 const Navbar = () => {
   return (
     <div>
@@ -59,6 +60,7 @@ const Navbar = () => {
 <Route path="/cart" element={<Cart/>}/>
 <Route path="/register" element={<Signup/>}/>
 <Route path="/login" element={<Login/>}/>
+
           
       </Routes>
       </BrowserRouter>

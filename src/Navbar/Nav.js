@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import { BsCart3 } from "react-icons/bs";
-import { FaRegUser } from "react-icons/fa";
+import { LuUserCircle2 } from "react-icons/lu";
 import { IoIosSearch } from "react-icons/io";
 import { useSelector } from 'react-redux';
 
@@ -136,13 +136,13 @@ const Nav = () => {
         <input  className="SearchBar" placeholder="Search Here..." ></input>< IoIosSearch id ="searchicon"/>
        
         <div className='cart'>  
-        <NavLink to="/cart">< BsCart3 style={{color:"white"}}/><span style={{color:"orange"}}>{cartCount.length}</span></NavLink>
+        <NavLink to="/cart">< BsCart3 style={{color:"white" ,height:"25px", width:"30px" }}/><span style={{color:"orange"}}>{cartCount.length}</span></NavLink>
         </div>
       
        <NavLink to="/register">
         <div className='loginicon'>
         
-          <FaRegUser />
+        <LuUserCircle2 style={{height:"27px", width:"30px"}}/>
         </div>
         </NavLink>
         </div>

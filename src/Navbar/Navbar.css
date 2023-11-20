@@ -18,14 +18,16 @@ font-family: 'Montserrat';
 }
 .loginicon{
     color: white;
+   
     
 }
 .SearchBar{
     border: 2px solid black;
-   height:20px;
-   border-radius: 10px;
-   
-    background-color: white;
+   height:30px;
+   border-radius: 5px;
+    background-color: rgb(239, 214, 214);
+    width: 200px;
+    
 }
 #searchicon{
   color: black;
@@ -45,26 +47,18 @@ h4{
 }
 li{
     color: white;
-    font-size: 17px;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace; 
     font-weight:bolder
 }
 a{
     text-decoration: none;
 }
-ul.sub-routes {
-  display: none;
-  position: absolute;
-  background: transparent;
-  margin: 0;
+.cart{
+  height:30px;
+  width:50px;
 }
-.main-link:hover + ul.sub-routes {
-  display: block;
-}
-.route-container:hover ul.sub-routes {
-  display: block;
-  height: 200px;
-}
+
 .menu{
     position: absolute;
     background-color: rgb(114, 171, 180);
@@ -189,8 +183,8 @@ ul.sub-routes {
 }
 .icon1{
 
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 h5{
   color: black;
@@ -207,7 +201,7 @@ h5{
   }
   .DropDown,
 .Navbar {
-  margin-top: -0.5em;
+  /* margin-top: -0.5em; */
   padding-bottom: 10px;
   display: flex;
   justify-content: space-around;

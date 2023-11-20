@@ -8,8 +8,9 @@ import Footer from '../Footer/Footer'
 import { addtoCart } from '../Redux/Slice'
 import { useDispatch } from 'react-redux'
 import { FaShippingFast } from "react-icons/fa";
-import { GrUserManager } from "react-icons/gr";
+import { FaRegUser } from "react-icons/fa6";
 import { RiRefund2Fill } from "react-icons/ri";
+import { IoCartSharp } from "react-icons/io5";
 import Nav from '../Navbar/Nav'
 
 
@@ -52,6 +53,7 @@ const Home = () => {
           
           </div>
           </NavLink>
+          <IoCartSharp className="cart-icon"/>
           <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
           </div>
           </>
@@ -77,7 +79,7 @@ const Home = () => {
         <p>Our 100% Refund Guarantee: Your Peace of Mind, Our Promise.Atyour satisfaction is our top priority. We understand that sometimes things may not go as planned, and that's why we're proud to offer a 100% Refund Guarantee. With this assurance.</p>
         </div> 
 <div className='shipping1'>
-  <GrUserManager className='icon1'/>
+  <FaRegUser className='icon1'/>
   <h5>Customer Support</h5>
   <p>  At StoreM4your satisfaction is our priority, and that's why we're thrilled to offer 24/7 support. We understand that your needs don't follow a schedule, and neither do we. With our always-on support, you can shop, inquire, and resolve issues whenever it's convenient for you.</p>
   </div>

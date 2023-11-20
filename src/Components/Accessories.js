@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom'
 import { addtoCart } from '../Redux/Slice'
 import { useDispatch } from 'react-redux'
 import Nav from '../Navbar/Nav'
+import { IoCartSharp } from "react-icons/io5";
 
 const Accessories = () => {
   const dispatch=useDispatch()
@@ -51,6 +52,7 @@ const Accessories = () => {
          
           </div>
           </NavLink>
+          <IoCartSharp className="cart-icon"/>
           <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
           </div>
         )

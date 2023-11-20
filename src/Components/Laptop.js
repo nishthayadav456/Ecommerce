@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import { addtoCart } from '../Redux/Slice'
+import { IoCartSharp } from "react-icons/io5";
 import { useDispatch } from 'react-redux'
 import Nav from '../Navbar/Nav'
 const Laptop = () => {
@@ -50,6 +51,7 @@ const Laptop = () => {
          
           </div>
           </NavLink>
+          <IoCartSharp className="cart-icon"/>
           <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
           </div>
           

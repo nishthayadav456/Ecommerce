@@ -41,10 +41,10 @@ navi("/login")
   }
 
   return(
-      <>
+      <div className="body">
       
       <form>
-      <h1  className="formheading">REGISTER</h1>
+      <h1  className="formheading">SignUp</h1>
       <p>Signup now and get full access to our app</p>
           <label htmlFor="name">Name : </label>
           <input className="input-bar" type="text" placeholder="Enter your name" value={data.name} id="name" name="name" onChange={changeHandle}/>
@@ -54,10 +54,10 @@ navi("/login")
           <input className="input-bar" type="email" placeholder="Enter your email" value={data.email} id="email" name="email" onChange={changeHandle}/>
           <label  htmlFor="password">Password : </label>
           <input className="input-bar"type="password" placeholder="Enter your password" value={data.password} id="password" name="password" onChange={changeHandle}/>
-          <button className="btn1"  onClick={handleClick}>Signup</button>
+          <button className="btn1"  onClick={handleClick}>SignUp</button>
           
       </form>
-      </>
+      </div>
   )
  
 }

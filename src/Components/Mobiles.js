@@ -5,6 +5,7 @@ import axios from 'axios'
 import { NavLink } from 'react-router-dom'
 import { addtoCart } from '../Redux/Slice'
 import { useDispatch } from 'react-redux'
+import { IoCartSharp } from "react-icons/io5";
 
 import Nav from '../Navbar/Nav'
 
@@ -54,6 +55,7 @@ const Mobiles = () => {
          
          </div>
           </NavLink>
+          <IoCartSharp className="cart-icon"/>
           <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
           </div>
          

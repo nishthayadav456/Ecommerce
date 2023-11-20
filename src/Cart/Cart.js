@@ -15,7 +15,7 @@ const Cart = () => {
     dispatch(DecreaseQuantity({ id }));
   };
   return (
-    <div>
+    <div className='body1'>
       <h2 className="cartparent"> Your Cart</h2>
       <div className="contentcart">
         <div className="titleOfcart">

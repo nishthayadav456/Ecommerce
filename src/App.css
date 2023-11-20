@@ -24,7 +24,7 @@ text-align: center;
 /* border: 3px solid rgb(172, 29, 29); */
 margin-top: 30px;
 width:250px;
-height:380px;
+height:350px;
 border: 2px solid #ebebeb;
 border-radius: 5px;
 
@@ -36,15 +36,21 @@ border-radius: 5px;
   transform: translateY(-10px);
 }
 .mobileimage{
-  height:250px;
-  width:200px;
+  height: 200px;
+  width: 185px;
   
   
 }
+
 a{
   color: black;
 }
-
+.price{
+  color: crimson;
+  font-size: small;
+  font-weight: 700;
+  
+}
 .btn{
   height:10%;
   width:25%;
@@ -101,7 +107,8 @@ height:380px;
   width:100px;
   height:50px;
   margin: 30px;
-  border-radius: 10px solid black;
+  border-radius: 5px solid black ;
+  border: none;
   background-color: rgb(173, 169, 169);
 }
 .explore{
@@ -128,20 +135,22 @@ height:380px;
   width:100%;
 }
 .addtocart{
-  height:30px;
-  width:80px;
-  border-radius: 5px solid white;
+  height: 38px;
+  width: 119px;
+  border-radius: 3px ;
   background-color: rgb(227, 78, 24);
+  border: none;
   margin-top: 20px;
-  color: #ebebeb;
-  left: 75px;
-  height: 41px;
-  width: 99px;
-  border-radius: 5px solid white;
-  background-color: rgb(227, 78, 24);
-  margin-top: 20px;
-  color: #ebebeb;
+  color:snow;
   position: relative;
-  bottom: 81px;
+  bottom: 91px;
+  left: 61px;
   cursor: pointer;
+}
+.cart-icon{
+  position: relative;
+  bottom: 89px;
+  left: 85px;
+  z-index: 1;
+  color:snow;
 }

@@ -5,6 +5,7 @@ import Footer from '../../Footer/Footer'
 import Nav from '../../Navbar/Nav'
 import { addtoCart } from '../../Redux/Slice'
 import { useDispatch } from 'react-redux'
+import { IoCartSharp } from "react-icons/io5";
 const Headphone = () => {
   const dispatch=useDispatch()
   const[data,setData]=useState([])
@@ -40,6 +41,7 @@ const Headphone = () => {
          
           </div>
           </NavLink>
+          <IoCartSharp className="cart-icon"/>
           <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
           </div>
         )
