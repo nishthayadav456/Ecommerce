@@ -1,9 +1,9 @@
-import './Navbar.css'
+
 import { BrowserRouter,Route,Routes} from 'react-router-dom'
 import Home from '../Components/Home'
 import Laptop from '../Components/Laptop'
 import Mobiles from '../Components/Mobiles'
-
+import './Navbar.css'
 import Watches from '../Components/Watches'
 import Accessories from '../Components/Accessories'
 import Television from '../Components/Television'
@@ -24,6 +24,7 @@ import Samsungtv from '../Components/Television/Samsung'
 import Cart from '../Cart/Cart'
 import Signup from '../Views/Signup'
 import Login from '../Views/Login'
+import { SearchBar } from './SearchBar'
 
 const Navbar = () => {
   return (
@@ -60,7 +61,7 @@ const Navbar = () => {
 <Route path="/cart" element={<Cart/>}/>
 <Route path="/register" element={<Signup/>}/>
 <Route path="/login" element={<Login/>}/>
-
+<Route path="/search" element={<SearchBar/>}/>
           
       </Routes>
       </BrowserRouter>

@@ -9,7 +9,7 @@ const DynamicCompo = () => {
     const newid= parseInt(id)
     const[data,setData]=useState([])
   useEffect(()=>{
-    axios.get("https://e-commerce-nwyx.onrender.com/api/postdata")
+    axios.get("https://e-commerce-nwyx.onrender.com/api/Searchdata")
     .then((response)=>
       setData(response.data)
     )
@@ -24,15 +24,17 @@ const DynamicCompo = () => {
            <>
            <div className='dynamiccontainer'>
            
+           <div>
+            
           <div className="middle"key={index}>
-        <div><img className='mobileimage' src={item.image} alt="not found"/></div>
-      </div>
-      <div className='rightcontainer'>
-            <div><h2>{item.heading.slice(0,50)}</h2></div>
-          <div className='price'> <h2>{item.price}</h2> </div>
-          <h3>{item.Model}</h3>
-          <p className='description'>{item.description}</p>
-          <div><button className='addtocart'>Add to cart</button></div> 
+      <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
+          
+            <div><h3>{item.heading.slice(0,10)}..</h3></div>
+          <div className='price'> <h3>₹{item.price}</h3> </div>
+         
+          </div>
+     
+         
           </div>
         
           </div>
