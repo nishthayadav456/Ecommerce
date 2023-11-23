@@ -3,6 +3,8 @@ import './Cart.css'
 import { useSelector, useDispatch } from "react-redux";
 import { RemoveItem, IncreaseQuantity, DecreaseQuantity } from "../Redux/Slice";
 import {loadStripe} from '@stripe/stripe-js';
+import Footer from '../Footer/Footer';
+import Nav from '../Navbar/Nav';
 const Cart = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.Cart.cart);
@@ -40,6 +42,8 @@ const Cart = () => {
     }
    }
   return (
+    <>
+    <Nav/>
     <div className='body1'>
       <h2 className="cartparent"> Your Cart</h2>
       <div className="contentcart">
@@ -78,7 +82,9 @@ const Cart = () => {
           <button className='buybtn' onClick={makePayment}>Buy Now</button>
         </div>
       </div>
+      <Footer/>
     </div>
+    </>
   );
 };
 export default Cart;
