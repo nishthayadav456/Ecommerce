@@ -129,14 +129,14 @@ h5{
 
 /* Search Bar css */
 
-.home_SubParent{
+.Search-SubParent{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   text-align: center;
 }
 
-.homeChild{
+.middle{
   margin-top: 30px;
   width:250px;
   height:350px;
@@ -144,17 +144,15 @@ h5{
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
-.homeChild:hover{
+.middle:hover{
   transform: translateY(-10px);
 }
-.home_Img{
+.Search-Img{
   height: 200px;
   width: 185px;
 }
-.home_Left{
-  width: 400px;
-}
-.home_Right{
+
+.Right-search{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -179,7 +177,28 @@ h5{
   z-index: 1;
   color:snow;
 }
-
+.container {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  height: 90vh;
+  font-family: 'Arial', sans-serif;
+  overflow-y: auto;
+}
+.container1{
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  height: 90vh;
+  font-family: 'Arial', sans-serif;
+ 
+}
 
 
 

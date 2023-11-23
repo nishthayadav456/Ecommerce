@@ -6,7 +6,7 @@
 body{
 font-family: 'Montserrat';
 }
-.top1{
+.topbar{
   display: flex;
   justify-content: space-around;
   background-color:#252525;
@@ -15,7 +15,7 @@ font-family: 'Montserrat';
     display: none;
    
 }
-.top1_right{
+.right-container{
     display: flex;
     background-color: #1C6AA1;
     width:50%;
@@ -47,7 +47,7 @@ font-family: 'Montserrat';
 .seracImg{
   width:20px;
 }
-.profileImg{
+.user-Img{
   width:30px;
 height: 30px;
   color: white;
@@ -60,7 +60,7 @@ height: 30px;
   background-color:rgb(239, 214, 214) ;
 }
 
-.basket{
+/* .basket{
   height: 20px;
   width: 30px;
     background-color: white;
@@ -69,8 +69,8 @@ height: 30px;
 .basket_Img{
     height: 20px;
     width: 30px;
-}
-.sign_In{
+} */
+.signbtn{
     border: 2px solid black;
 }
 .nav2{
@@ -107,12 +107,12 @@ ul.sub-routes {
   display: block;
   height: 200px;
 }
-.menu{
+.dropdown{
     position: absolute;
     background-color: rgb(46, 93, 124);
     z-index: 5;
 }
-.ham_Div{
+.Main-hamburger{
     justify-content: space-around;
     flex-wrap: wrap;
     display: flex;
@@ -129,14 +129,37 @@ ul.sub-routes {
 .span2{
 color: red;
 }
-.ham_Basket_Img2{
+.cartImage{
   height: 30px;
   width: 30px;
   color: white;
 }
-.sign{
+.signbtn{
     margin-top: 10%;
 }
+.username{
+  color: whitesmoke;
+}
+.profile{
+ 
+  text-align: center;
+  font-weight: 900;
+  
+}
+.user-parent{
+ 
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 5;
+  background-color: black;
+  color: white;
+}
+.profile:hover .user-parent{
+display:flex ;
+}
+
+
 /* Hamburger Icon Styles */
 .hamburger-icon {
     display: none;
@@ -155,14 +178,14 @@ color: red;
   .open {
     transform: origine(center);
   }
-/* Media Query for Mobile View */
-/* Add responsive styles for mobile view */
+/*  Mobile View */
+
 @media screen and (max-width: 580px) {
-    .top1 {
+    .topbar {
       text-align: center;
       display: block;
     }
-    .menu {
+    .dropdown{
         display: none;
     }
     .logo{
@@ -174,6 +197,8 @@ color: red;
         float: left;
         font-weight: bolder;
         margin-top: 18px;
+        color: black;
+        background-color: white;
        
     }
     .span1{
@@ -192,12 +217,12 @@ color: red;
     opacity: 0.9;
       z-index: 1;
     }
-    .seracImg{
+    /* .seracImg{
       display: none;
-    }
+    } */
     .nav2.open {
       display: flex;
-      height:77%;
+      height:80%;
       width:99.5%;
     }
     .nav2 a {
@@ -216,7 +241,7 @@ color: red;
       font-size: 20px;
       color: white;
     }
-    .ham_Div{
+    .Main-hamburger{
         justify-content: space-around;
         display: flex;
         flex-wrap: wrap;
@@ -229,15 +254,15 @@ color: red;
        background-color: rgb(239, 214, 214);
        width: 200px;
   }
-    .ham_Basket_Img2{
+    .cartImage{
       height: 30px;
       width: 30px;
       color: white;
     }
-    .sign{
+    .signbtn{
         margin-top: 10%;
     }
-    .ham_Btn{
+    .hamburger-Btn{
         height: 40px;
         width: 100px;
         font-size: 20px;
@@ -251,12 +276,27 @@ color: red;
       border: none;
       
     }
-  .profile{
-    display: none;
-    
-  }
+    .profile{
  
-.search_Bar{
+      text-align: center;
+      font-weight: 900;
+      
+    }
+    .user-parent{
+     
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      z-index: 5;
+      background-color: black;
+      color: white;
+    }
+    .profile:hover .user-parent{
+    display:flex ;
+    }
+    
+ 
+/* .search_Bar{
     display: none;
 }
 .basket{
@@ -264,17 +304,17 @@ color: red;
 }
 .basket_Img{
     display: none;
-}
-.sign_In{
+} */
+/* .signbtn{
     display: none;
-}
+} */
   }
   @media screen and (min-width:581px) and (max-width:825px){
-    .top1 {
+    .topbar {
         text-align: center;
         display: block;
       }
-      .menu {
+      .dropdown{
         display: none;
     }
     .logo{
@@ -286,7 +326,8 @@ color: red;
         float: left;
         font-weight: bolder;
         margin-top: 18px;
-       
+        color: black;
+  background-color: white;
     }
       .nav2 {
         display: none;
@@ -316,6 +357,25 @@ color: red;
         text-decoration: none;
         text-align: center;
       }
+      .profile{
+ 
+        text-align: center;
+        font-weight: 900;
+        
+      }
+      .user-parent{
+       
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        z-index: 5;
+        background-color: black;
+        color: white;
+      }
+      .profile:hover .user-parent{
+      display:flex ;
+      }
+      
       .hamburger {
         display: block;
         position: absolute;
@@ -325,7 +385,7 @@ color: red;
         font-size: 20px;
         color: white;
       }
-       /* for Top1 */
+     
     .logo{
       border: 2px solid black;
       font-family: 'Courier New', Courier, monospace;
@@ -333,7 +393,7 @@ color: red;
       font-weight: bold;
       margin-left: 15%;
   }
-  .ham_Div{
+  .Main-hamburger{
     justify-content: space-around;
     display: flex;
 }
@@ -345,14 +405,14 @@ color: red;
    background-color: rgb(239, 214, 214);
    width: 200px;
 }
-.ham_Basket_Img2{
+.cartImage{
   height: 30px;
   width: 30px;
   color: white;
 }
-.seracImg{
+/* .seracImg{
   display: none;
-}
+} */
 .profile{
   display: none;
 }
@@ -363,17 +423,17 @@ color: red;
         color: red;
         font-size: 30px;
     }
-.sign{
+.signbtn{
     margin-top: 10%;
 }
-.ham_Btn{
+.hamburger_Btn{
     height: 55px;
     width: 150px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 20px;
 }
-  .search_Bar{
+  /* .search_Bar{
       display: none;
   }
   .basket{
@@ -381,8 +441,8 @@ color: red;
   }
   .basket_Img{
       display: none;
-  }
-  .sign_In{
+  } */
+  .signbtn{
       display: none;
   }
   }

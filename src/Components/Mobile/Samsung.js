@@ -29,7 +29,7 @@ const Samsung = () => {
          
          {data.filter((item)=>item.Brand==="Samsung").slice(0,loadData).map((item,index)=>{
           console.log(item)
-          const{id=item.id,image=item.image,title=item.title,price=item.price} = item
+          const{id=item.id,image=item.image,heading=item.heading,price=item.price} = item
           console.log(id)
           return(
              <div>
@@ -43,7 +43,7 @@ const Samsung = () => {
             </div>
             </NavLink>
             <IoCartSharp className="cart-icon"/>
-            <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
+            <button onClick={()=>dispatch(addtoCart({id,image,heading,price}))} className='addtocart'>Add to cart</button>
             </div>
           )
          })}

@@ -26,6 +26,9 @@ import Signup from '../Views/Signup'
 import Login from '../Views/Login'
 import { SearchBar } from './SearchBar'
 
+import Cancel from '../Cart/Cancel'
+import Success from '../Cart/Success'
+
 const Navbar = () => {
   return (
     <div>
@@ -62,7 +65,8 @@ const Navbar = () => {
 <Route path="/register" element={<Signup/>}/>
 <Route path="/login" element={<Login/>}/>
 <Route path="/search" element={<SearchBar/>}/>
-          
+<Route path="/successfull" element={<Success/>}/>  
+<Route path="/cancel" element={<Cancel/>}/>    
       </Routes>
       </BrowserRouter>
     </div>

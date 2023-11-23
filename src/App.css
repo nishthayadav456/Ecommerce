@@ -78,15 +78,19 @@ a{
 
 .dynamiccontainer{
   display: flex;
-  justify-content: space-around;
-
+margin: auto;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+ 
+  width: 70%;
+
 }
 .leftcon{
+  margin-top: 118px;
+  width: 250px;
+  height: 288px;
   text-align: center;
-    margin-top: 97px;
-    width: 250px;
-    height: 266px;
   border: 2px solid #ebebeb;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
@@ -97,14 +101,28 @@ a{
     transform: translateY(-10px);
   }
   .rightcon{
-    border: 2px solid black;
-    height:300px;
-    width:27%;
+   
+    height: 300px;
+    width: 53%;
+    margin-top: 129px;
   }
 .rightcontainer{
 margin-top: 30px;
 width:400px;
 height:380px;
+}
+.addtocart3{
+  height: 38px;
+  width: 119px;
+  border-radius: 3px ;
+  background-color: rgb(227, 78, 24);
+  border: none;
+  margin-top: 20px;
+  color:snow;
+  /* position: relative;
+  bottom: 91px;
+  left: 61px; */
+  cursor: pointer;
 }
 .description{
   color: black;
@@ -182,32 +200,74 @@ height:380px;
     align-items: center;
     border-bottom: 2px solid gray;
   }
+  .dynamiccontainer{
+    display: flex;
+  margin: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+    width: 70%;
+  
+  }
+  .leftcon{
+    margin-top: 90px;
+    width: 250px;
+    height: 288px;
+    text-align: center;
+    border: 2px solid #ebebeb;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        
+    }
+    
+    .left:hover{
+      transform: translateY(-10px);
+    }
+    .rightcon{
+
+      height: 300px;
+      width: 94%;
+      margin-top: 21px;
+    }
+  .rightcontainer{
+  margin-top: 30px;
+  width:400px;
+  height:380px;
+  }
+  .addtocart3{
+    height: 38px;
+    width: 119px;
+    border-radius: 3px ;
+    background-color: rgb(227, 78, 24);
+    border: none;
+    margin-top: 20px;
+    color:snow;
+    /* position: relative;
+    bottom: 91px;
+    left: 61px; */
+    cursor: pointer;
+  }
 }
 @media screen and (min-width:581px) and (max-width:825px) {
   .Mainparent{
     display: flex;
     justify-content: space-around;
-    /* border: 2px solid rgb(92, 17, 17); */
-  }
+   }
   .mobile-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width:55%;
-    /* border: 2px solid black; */
-    /* margin-left: 20%; */
-  }
+   }
   .middle{
 text-align: center;
-/* border: 3px solid rgb(172, 29, 29); */
 margin-top: 30px;
 width:200px;
 height:350px;
 border: 2px solid #ebebeb;
 border-radius: 5px;
-
- box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .middle:hover{
@@ -216,8 +276,6 @@ border-radius: 5px;
 .mobileimage{
   height: 200px;
   width: 185px;
-  
-  
 }
 .addtocart{
   height: 38px;

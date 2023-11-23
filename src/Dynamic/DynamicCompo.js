@@ -23,15 +23,13 @@ const DynamicCompo = () => {
      <Nav/> 
      {data.filter((item)=>item.id===newid).map((item,index)=>{
         console.log(item)
+        console.log(item.id)
         const{id=item.id,image=item.image,title=item.title,price=item.price} = item
         console.log(id)
         return(
            <>
            <div className='dynamiccontainer'>
-           
-           <div>
-            
-          <div className="leftcon"key={index}>
+           <div className="leftcon"key={index}>
           <div>  <img className='mobileimage' src={item.image} alt="not found"/></div>
           </div>
           <div className='rightcon'>
@@ -39,10 +37,10 @@ const DynamicCompo = () => {
           <div className='price'> <h3>₹{item.price}</h3> </div>
          <h6>{item.description.slice(0,200)}...</h6>
          <IoCartSharp className="cart-icon"/>
-          <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
+          <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart3'>Add to cart</button>
          </div>
          
-          </div>
+          
         
           </div>
           </>

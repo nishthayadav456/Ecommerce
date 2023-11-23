@@ -1,10 +1,4 @@
-// import React from 'react'
-// import { NavLink } from 'react-router-dom';
-// import { useState } from 'react';
-// import { BsCart3 } from "react-icons/bs";
-// import { LuUserCircle2 } from "react-icons/lu";
-// import { IoIosSearch } from "react-icons/io";
-// import { useSelector } from 'react-redux';
+
 import React, { useEffect, useState } from "react";
 import './Nav.css'
 import { BsCart3 } from "react-icons/bs";
@@ -15,22 +9,21 @@ import { IoIosSearch } from "react-icons/io";
 import axios from "axios";
 
 const Nav = () => {
-
   const cardCount = useSelector((state)=>state.Cart.cart)
-  const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isHomeHovered, setIsHomeHovered] = useState(false);
-  const[isMobileHovered,setIsMobileHovered]=useState(false)
-  const[isClotheHovered,setIsClotheHovered]=useState(false)
-  const[isFurnitureHovered,setIsFurnitureHovered]=useState(false)
-  const[isWatchHovered,setIsWatchHovered]=useState(false)
-  const[isGymHovered,setIsGymHovered]=useState(false)
+  const [dropdownOpen, setdropdownOpen] = useState(false);
+  const [HomeHover, HomeHovered] = useState(false);
+  const[MobileHover,MobileHovered]=useState(false)
+  const[laptopHover,laptopHovered]=useState(false)
+  const[watchesHover,watchesHovered]=useState(false)
+  const[accessoriesHover,accessoriesHovered]=useState(false)
+  const[televisionHover,televisionHovered]=useState(false)
   const [searchData,setSearchData]=useState([])
   const[val,setval]=useState({value:"",btn:""})
   const [query, setQuery] = useState("");
 const token=localStorage.getItem("token")
 const userName=localStorage.getItem("name")
 
-const Nav=useNavigate();
+const Navigate=useNavigate();
 useEffect(()=>{
   if(token){
     setval({
@@ -40,18 +33,18 @@ useEffect(()=>{
 }
 else{
   setval({
-    value:"Profile",
-    btn:"SignIn"
+    value:"User",
+    btn:"Sign in"
   })
 }
-},[token,Nav,userName])
+},[token,Navigate,userName])
 const handlelogout= ()=>{
   localStorage.removeItem("token");
   localStorage.removeItem("name");
-  Nav("/")
+  Navigate("/")
 }
   const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
+    setdropdownOpen(!dropdownOpen);
   };
   const handleChange=(e)=>{
     setQuery(e.target.value)
@@ -66,39 +59,32 @@ const handlelogout= ()=>{
   return(
     <>
     <div>
-      <div className="top1">
+      <div className="topbar">
          <div className="logo1">StoreM4!</div> 
-        <div className="top1_right">
+        <div className="right-container">
         <div className="hamburger" onClick={toggleMenu}>
           &#9776;
         </div>
         </div>
       </div>
-      <nav className={`nav2 ${isMenuOpen ? "open" : ""}`}>
+      <nav className={`nav2 ${dropdownOpen ? "open" : ""}`}>
       <div className="logo">StoreM4!</div>
-        <div className="ham_Div">
-        {/* <input className="search" placeholder="Search Here"></input> */}
-        
-      
-        <div className="sign">
-          <button className="ham_Btn">Sign In</button>
+        <div className="Main-hamburger">
+       <div className="signbtn">
+          <button className="hamburger-Btn">Sign in</button>
         </div>
         </div>
         <div
           className="home-container"
-          onMouseEnter={() => setIsHomeHovered(true)}
-          onMouseLeave={() => setIsHomeHovered(false)}
+          onMouseEnter={() => HomeHovered(true)}
+          onMouseLeave={() => HomeHovered(false)}
         >
           <NavLink to="/">
             <ul  type="none">
               <li>Home</li>
-              {isHomeHovered && (
-                <ul type="none" className="menu">
-                  {/* <NavLink to="/clothe"><li>Clothe</li></NavLink>
-                  <NavLink to="/mobile"><li>Mobile</li></NavLink>
-                  <NavLink to="/furniture"><li>Furniture</li></NavLink>
-                  <NavLink to="/watch"><li>Watch</li></NavLink>
-                  <NavLink to="/gym"><li>Gym</li></NavLink> */}
+              {HomeHover && (
+                <ul type="none" className="dropdown">
+                 
                 </ul>
               )}
             </ul>
@@ -106,14 +92,14 @@ const handlelogout= ()=>{
         </div>
         <div
          className="mobile-container"
-         onMouseEnter={() => setIsMobileHovered(true)}
-         onMouseLeave={() => setIsMobileHovered(false)}
+         onMouseEnter={() => MobileHovered(true)}
+         onMouseLeave={() => MobileHovered(false)}
         >
              <NavLink to="/mobile">
           <ul  type="none">
             <li>Mobile</li>
-            {isMobileHovered && (
-                <ul type="none" className="menu">
+            {MobileHover && (
+                <ul type="none" className="dropdown">
                 <NavLink to="/realme"><li>Realme</li></NavLink>
                 <NavLink to="/vivo"><li>Vivo</li></NavLink>
                 <NavLink to="/samsung"><li>Samsung</li></NavLink>
@@ -123,15 +109,15 @@ const handlelogout= ()=>{
         </NavLink>
         </div>
        <div
-        className="furniture-container"
-        onMouseEnter={() => setIsFurnitureHovered(true)}
-        onMouseLeave={() => setIsFurnitureHovered(false)}
+        className="laptop-container"
+        onMouseEnter={() => laptopHovered(true)}
+        onMouseLeave={() => laptopHovered(false)}
        >
        <NavLink to="/laptop">
           <ul type="none">
             <li>laptop</li>
-            {isFurnitureHovered && (
-                 <ul type="none" className="menu" >
+            {laptopHover && (
+                 <ul type="none" className="dropdown" >
                 <NavLink to="/hp"><li>HP</li></NavLink>
                  <NavLink to="/dell"><li>Dell</li></NavLink>
                  <NavLink to="/acer"><li>Acer</li></NavLink>
@@ -140,16 +126,15 @@ const handlelogout= ()=>{
               </ul>
         </NavLink>
        </div>
-       <div
-          className="watch-container"
-          onMouseEnter={() => setIsWatchHovered(true)}
-          onMouseLeave={() => setIsWatchHovered(false)}
+       <div className="watches-container"
+          onMouseEnter={() => watchesHovered(true)}
+          onMouseLeave={() => watchesHovered(false)}
        >
        <NavLink to="/watches">
           <ul type="none">
             <li>Watches</li>
-            {isWatchHovered && (
-                <ul type="none" className="menu">
+            {watchesHover && (
+                <ul type="none" className="dropdown">
                  <NavLink to="/fastrack"><li>Fastrack</li></NavLink>
                    <NavLink to="/titan"><li>Titan</li></NavLink>
                    <NavLink to="/casio"><li>Casio</li></NavLink>
@@ -159,15 +144,15 @@ const handlelogout= ()=>{
         </NavLink>
        </div>
        <div
-         className="clothe-container"
-         onMouseEnter={() => setIsClotheHovered(true)}
-         onMouseLeave={() => setIsClotheHovered(false)}
+         className="accessories-container"
+         onMouseEnter={() => accessoriesHovered(true)}
+         onMouseLeave={() => accessoriesHovered(false)}
        >
        <NavLink to="/accessories">
           <ul type="none">
             <li>Accessories</li>
-            {isClotheHovered && (
-                <ul type="none" className="menu">
+            {accessoriesHover && (
+                <ul type="none" className="dropdown">
                    <NavLink to="/charger"><li>Charger</li></NavLink>
                     <NavLink to="/headphone"><li>Headphones</li></NavLink>
                   </ul>
@@ -176,15 +161,15 @@ const handlelogout= ()=>{
         </NavLink>
        </div>
         <div
-              className="gym-container"
-              onMouseEnter={() => setIsGymHovered(true)}
-              onMouseLeave={() => setIsGymHovered(false)}
+              className="television-container"
+              onMouseEnter={() => televisionHovered(true)}
+              onMouseLeave={() => televisionHovered(false)}
         >
         <NavLink to="/television">
           <ul type="none">
            <li>Television</li>
-            {isGymHovered && (
-                <ul type="none" className="menu">
+            {televisionHover && (
+                <ul type="none" className="dropdown">
                 <NavLink to="/lg"> <li>LG</li></NavLink>
                 <NavLink to="/samsungtv"><li>Samsung</li></NavLink>
                
@@ -198,14 +183,14 @@ const handlelogout= ()=>{
         <button id="searchicon" onClick={handleSearch}><Link to="/search" state={searchData}><IoIosSearch /></Link></button>
         </div>
         <NavLink to="/cart">
-        <BsCart3 className="ham_Basket_Img2" />
+        <BsCart3 className="cartImage" />
         <span className="span2">{cardCount.length}</span>
         </NavLink>
-        <div className="profile"><LuUserCircle2 className="profileImg" />
-                <div >
-                  <span>{val.value}</span>
+        <div className="profile"><LuUserCircle2 className="user-Img" />
+                <div className="user-parent">
+                  <span className="username">{val.value}</span>
                   {
-                    val.btn === "LogOut" ? <span onClick={handlelogout}>{val.btn}</span> :  <span><NavLink to='/login'>{val.btn}</NavLink></span>
+                    val.btn === "LogOut" ? <span onClick={handlelogout}>{val.btn}</span> :  <span><NavLink to='/register' style={{color:"white"}}>{val.btn}</NavLink></span>
                   }
                 </div>
             </div>

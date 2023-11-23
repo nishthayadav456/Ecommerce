@@ -38,7 +38,7 @@ const Laptop = () => {
        
        {data.filter((item)=>item.category==="laptop").slice(0,loadData).map((item,index)=>{
         console.log(item)
-        const{id=item.id,image=item.image,title=item.title,price=item.price} = item
+        const{id=item.id,image=item.image,heading=item.heading,price=item.price} = item
         console.log(id)
         return(
            <div>
@@ -52,7 +52,7 @@ const Laptop = () => {
           </div>
           </NavLink>
           <IoCartSharp className="cart-icon"/>
-          <button onClick={()=>dispatch(addtoCart({id,image,title,price}))} className='addtocart'>Add to cart</button>
+          <button onClick={()=>dispatch(addtoCart({id,image,heading,price}))} className='addtocart'>Add to cart</button>
           </div>
           
         )

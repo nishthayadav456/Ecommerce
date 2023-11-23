@@ -26,19 +26,27 @@ function Login(){
         //  .then(res=>console.log(res.data))
          .then((res)=>{
           
-            alert(res.data.msg);
+            alert(res.data.message);
             console.log(res.data)
             setData(res.data);
             localStorage.setItem("token",res.data.token)
+            if(res.data.token){
+              navi("/")
+            }
+            else{
+              navi("/login")
+            }
           })
-        .catch(err=>console.log(err))
+          .catch((err)=>{
+            console.log(err)      
+            })
         setData({
             name: "",
             phone: "",
             email: "",
             password: ""
         })
-        navi("/")
+ 
        
       }
     
