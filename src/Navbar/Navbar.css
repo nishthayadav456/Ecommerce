@@ -97,7 +97,19 @@ font-family: 'Montserrat';
     cursor: pointer;
     font-size: 16px;
   }  
-   
+  .cartbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #cartbtn{
+      background-color: #0b1721;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
 /* shipping */
 
 .shipping{
@@ -220,6 +232,7 @@ h5{
     align-items: center;
     border-bottom: 2px solid #c1b3b3;
     padding: 10px 0;
+
   }
   
   .contentsimg {
@@ -245,7 +258,29 @@ h5{
   }
   
 }
+@media screen and (min-width:520px) and (max-width:825px)  {
+  .contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #c1b3b3;
+    padding: 10px 0;
+   
 
+  }
+  .cartparent {
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+ /* .contentcart{
+  height: 60vh;
+ } */
+}
  
 
 

@@ -194,9 +194,9 @@ pre{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        height: 100%;
         align-items: center;
-      
+        height:30vh;
+     z-index: 5;
         background-color: darkslategray;
      }
      /* .FDescription{
@@ -252,6 +252,7 @@ pre{
         height:30px;
         width:50px;
     }
+   
 }
     
   

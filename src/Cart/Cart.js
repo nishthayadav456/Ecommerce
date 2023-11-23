@@ -3,9 +3,11 @@ import './Cart.css'
 import { useSelector, useDispatch } from "react-redux";
 import { RemoveItem, IncreaseQuantity, DecreaseQuantity } from "../Redux/Slice";
 import {loadStripe} from '@stripe/stripe-js';
-import Footer from '../Footer/Footer';
+
 import Nav from '../Navbar/Nav';
+import { useNavigate } from 'react-router-dom';
 const Cart = () => {
+  const navi=useNavigate()
   const dispatch = useDispatch();
   const data = useSelector((state) => state.Cart.cart);
   const total = data.reduce((acc, item) => {
@@ -41,6 +43,7 @@ const Cart = () => {
       console.log(result.error)
     }
    }
+
   return (
     <>
     <Nav/>
@@ -82,8 +85,12 @@ const Cart = () => {
           <button className='buybtn' onClick={makePayment}>Buy Now</button>
         </div>
       </div>
-      <Footer/>
+      <div className='cartbtn'>
+      <button id="cartbtn" onClick={()=>(navi(-1))}>Back</button>
+      </div>
+  
     </div>
+    
     </>
   );
 };
