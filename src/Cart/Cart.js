@@ -26,7 +26,7 @@ const Cart = () => {
     const headers={
       "Content-Type":"application/json"
     }
-    const response = await fetch("http://localhost:4000/check/checkoutdata",{
+    const response = await fetch("https://e-commerce-nwyx.onrender.com/check/checkoutdata",{
             method:"POST",
             headers:headers,
             body:JSON.stringify(body)
